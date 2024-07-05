@@ -1,0 +1,23 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+//kB4mqgyGUbIlK5bY  //mongodb+srv://00028320:kB4mqgyGUbIlK5bY@cluster0.roycra9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+datasource db {
+  provider = "mongodb"
+  url      = "mongodb+srv://00028320:kB4mqgyGUbIlK5bY@cluster0.roycra9.mongodb.net/task?retryWrites=true&w=majority&appName=Cluster0"
+}
+
+model Task {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
