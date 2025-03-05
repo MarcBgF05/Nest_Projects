@@ -12,7 +12,7 @@ import { jwtConstants } from './auth/constants';
     AuthModule,
     UsersModule,
     MongooseModule.forRoot(
-      'mongodb+srv://00028320:',
+      'mongodb+srv:',
     ),
     
     TasksModule,
