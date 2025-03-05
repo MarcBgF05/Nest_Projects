@@ -12,9 +12,9 @@ import { jwtConstants } from './auth/constants';
     AuthModule,
     UsersModule,
     MongooseModule.forRoot(
-      'mongodb+srv://00028320:Wr5y9ZEnDfBcK8Bs@cluster0.riravzf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+      'mongodb+srv://00028320:',
     ),
-    //Wr5y9ZEnDfBcK8Bs
+    
     TasksModule,
     JwtModule.register({
       global: true,
